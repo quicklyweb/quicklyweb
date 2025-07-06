@@ -91,6 +91,7 @@ ALTER TABLE `users`
 ALTER TABLE `pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
+ALTER TABLE 'pages' ADD parent_id INT DEFAULT NULL;
 --
 -- AUTO_INCREMENT for table `users`
 --
