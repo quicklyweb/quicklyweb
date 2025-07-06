@@ -1,0 +1,14 @@
+# © Murat Anur
+RewriteEngine On
+RewriteBase /cms/
+
+# If the request is not a real file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite /about to index.php?page=about
+RewriteRule ^([a-zA-Z0-9-_]+)/?$ index.php?page=$1 [L,QSA]
+
+# Optional: redirect old format to new format (SEO-friendly)
+RewriteCond %{QUERY_STRING} ^page=(.*)$
+RewriteRule ^index\.php$ /cms/%1? [R=301,L]

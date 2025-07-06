@@ -1,2 +1,3 @@
-<h1><?= htmlspecialchars($title) ?></h1>
-<div><?= nl2br($content) ?></div>
+<?php
+// © Murat Anur
+?><div><?= $content ?? '' ?></div>
